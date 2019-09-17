@@ -87,6 +87,7 @@ public class Cipher3DES {
 			System.out.println("加密后："+aesdata);
 			String aa = Cipher3DES.decrypt(aesdata, keys, "dfadfget");
 			System.out.println("解密后："+aa);
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
