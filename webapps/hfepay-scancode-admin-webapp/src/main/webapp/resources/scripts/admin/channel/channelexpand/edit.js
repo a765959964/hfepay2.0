@@ -451,10 +451,10 @@ $(function(){
 	   	        required: "请输入【渠道名称】",
 	   	        maxlength: "长度不能超过50"
 	   	      },
-	   	    channelCode: {
-	   	        required: "请输入【二级域名编号】",
-	   	        maxlength: "长度不能超过30"
-	   	      },
+//	   	    channelCode: {
+//	   	        required: "请输入【二级域名编号】",
+//	   	        maxlength: "长度不能超过30"
+//	   	      },
 	   	    channelPreCode: {
 	   	        required: "请输入【编码抬头】",
 	   	        maxlength: "长度不能超过4"
@@ -552,27 +552,28 @@ $(function(){
 	   	      },
 	   	   accountType: {
 	   		   required: "请选择【是否对公对私】"
-	   	      },
-	   	    appid: {
-		   		   required: "请选择【公众号ID】",
-		   	       maxlength: "长度不能超过100"
-		   	      },
-		   	secret: {
-		   		   required: "请选择【公众号key】",
-		   	       maxlength: "长度不能超过100"
-		   	      },
-		   	registerTemplateId: {
-		   		   required: "请选择【注册消息模板ID】",
-		   	       maxlength: "长度不能超过100"
-		   	      },
-		   	payTemplateId: {
-		   		   required: "请选择【支付消息模板ID】",
-		   	       maxlength: "长度不能超过100"
-		   	      },
-		   	withDrawsTemplateId: {
-		   		   required: "请选择【提现模版ID】",
-		   	       maxlength: "长度不能超过100"
-		   	      }
+	   	      }
+//	   	      ,
+//	   	    appid: {
+//		   		   required: "请选择【公众号ID】",
+//		   	       maxlength: "长度不能超过100"
+//		   	      },
+//		   	secret: {
+//		   		   required: "请选择【公众号key】",
+//		   	       maxlength: "长度不能超过100"
+//		   	      },
+//		   	registerTemplateId: {
+//		   		   required: "请选择【注册消息模板ID】",
+//		   	       maxlength: "长度不能超过100"
+//		   	      },
+//		   	payTemplateId: {
+//		   		   required: "请选择【支付消息模板ID】",
+//		   	       maxlength: "长度不能超过100"
+//		   	      },
+//		   	withDrawsTemplateId: {
+//		   		   required: "请选择【提现模版ID】",
+//		   	       maxlength: "长度不能超过100"
+//		   	      }
 		},
    	    submitHandler:function(form){
    	    	

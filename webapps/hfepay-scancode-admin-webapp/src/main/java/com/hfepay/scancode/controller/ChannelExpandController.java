@@ -84,7 +84,7 @@ public class ChannelExpandController extends BaseController{
 		Map<Object, Object> map = new HashMap<Object, Object>();
 		Admin user = (Admin) request.getSession().getAttribute("currentScanAdminUser");
 		channelExpandCondition.setOperator(user.getUserName());
-		channelExpandCondition.setChannelPreCode(channelExpandCondition.getChannelPreCode().toUpperCase());//编码抬头转换大写
+//		channelExpandCondition.setChannelPreCode(channelExpandCondition.getChannelPreCode().toUpperCase());//编码抬头转换大写
 		try {
 			channelExpandService.save(channelExpandCondition);
 			map = Maps.mapByAarray(EXECUTE_STATUS,SUCCESS,VALUES,Constants.SUCCESS_MSG,"url","/adminManage/channelbase");

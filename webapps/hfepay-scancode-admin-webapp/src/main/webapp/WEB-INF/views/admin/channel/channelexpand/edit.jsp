@@ -79,26 +79,6 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">二级域名编号*</label>
-										<div class="col-md-4">
-											<input type="text" class="form-control" id="channelCode"  name = "channelCode" value="${Obj.channelCode}" placeholder="二级域名编号">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="control-label col-md-1">编码抬头*</label>
-										<div class="col-md-2">
-											<input type="text" class="form-control ajaxCheck2" id="channelPreCode"  name = "channelPreCode" value="${Obj.channelPreCode}" placeholder="编码抬头">
-										</div>
-									</div>
-								</div>
-							</div>
 							
 							<div class="row">
 								<div class="col-md-6">
@@ -171,22 +151,7 @@
 										</div>
 									</div>
 								</div>
-<!-- 								<div class="col-md-6"> -->
-<!-- 									<div class="form-group"> -->
-<!-- 										<label class="control-label col-md-2">QQ群</label> -->
-<!-- 										<div class="col-md-4"> -->
-<%-- 											<input type="text" class="form-control" id="qqGroup"  name = "qqGroup" value="${Obj.qqGroup}" placeholder="QQ群 多个逗号隔开"> --%>
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-md-6"> -->
-<!-- 									<div class="form-group"> -->
-<!-- 										<label class="control-label col-md-2">商务QQ</label> -->
-<!-- 										<div class="col-md-4"> -->
-<%-- 											<input type="text" class="form-control" id="businessCooperationQq"  name = "businessCooperationQq" value="${Obj.businessCooperationQq}" placeholder="商务QQ"> --%>
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
+
 							</div>
 							<div class="row">
 								<div class="col-md-6">
@@ -206,25 +171,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">公司官网</label>
-										<div class="col-md-8">
-											<input type="text" class="form-control" id="microblogUrl"  name = "microblogUrl" value="${Obj.microblogUrl}" placeholder="公司官网">
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">域名</label>
-										<div class="col-md-8">
-											<input type="text" class="form-control" id="domainName"  name = "domainName" value="${Obj.domainName}" placeholder="域名">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
+							
+							<%-- <div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
 										<label class="control-label col-md-1">首页上部LOGO</label>
@@ -238,99 +186,11 @@
 										</div>
 									</div>
 								</div>
-							</div>
-<!-- 							<div class="row"> -->
-<!-- 								<div class="col-md-9"> -->
-<!-- 									<div class="form-group"> -->
-<!-- 										<label class="control-label col-md-2">首页底部LOGO</label> -->
-<!-- 										<div class="col-md-5"> -->
-<!-- 											<input type="file" name="file" id="indexBottomImg_2" class="form-control fileInput"  -->
-<!-- 													onchange="submitForm('indexBottomImg_2','indexBottomImg','indexBottomImg_1','indexBottomImg')"/> -->
-<!-- 										</div> -->
-<!-- 										<div class="col-md-5" id="" style="margin-top: 7px;"> -->
-<%-- 											<img id="indexBottomImg_1" src="${Obj.indexBottomImg}" style="max-width: 400px;"/> --%>
-<%-- 											<input type="hidden"  val="hidden" id="indexBottomImg"  name = "indexBottomImg" value="${Obj.indexBottomImg}"> --%>
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-							<div class="row">
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="control-label col-md-1">官方微信二维码</label>
-										<div class="col-md-5">
-											<input type="file" name="file" id="indexWxImg_2" class="form-control fileInput" 
-													onchange="submitForm('indexWxImg_2','indexWxImg','indexWxImg_1','indexWxImg')"/>
-										</div>
-										<div class="col-md-5" id="" style="margin-top: 7px;">
-											<img id="indexWxImg_1" src="${Obj.indexWxImg}" style="max-width: 400px;"/>
-											<input type="hidden"  val="hidden" id="indexWxImg"  name = "indexWxImg" value="${Obj.indexWxImg}">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="control-label col-md-1">公司地址图</label>
-										<div class="col-md-5">
-											<input type="file" name="file" id="contactAddressImg_2" class="form-control fileInput" 
-													onchange="submitForm('contactAddressImg_2','contactAddressImg','contactAddressImg_1','contactAddressImg')"/>
-										</div>
-										<div class="col-md-5" id="" style="margin-top: 7px;">
-											<img id="contactAddressImg_1" src="${Obj.contactAddressImg}" style="max-width: 400px;"/>
-											<input type="hidden"  val="hidden" id="contactAddressImg"  name = "contactAddressImg" value="${Obj.contactAddressImg}">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="control-label col-md-1">登陆背景图</label>
-										<div class="col-md-5">
-											<input type="file" name="file" id="loginBackgroundImg_2" class="form-control fileInput" 
-													onchange="submitForm('loginBackgroundImg_2','loginBackgroundImg','loginBackgroundImg_1','loginBackgroundImg')"/>
-										</div>
-										<div class="col-md-5" id="" style="margin-top: 7px;">
-											<img id="loginBackgroundImg_1" src="${Obj.loginBackgroundImg}" style="max-width: 400px;"/>
-											<input type="hidden"  val="hidden" id="loginBackgroundImg"  name = "loginBackgroundImg" value="${Obj.loginBackgroundImg}">
-										</div>
-									</div>
-								</div>
-							</div>
-<!-- 							<div class="row"> -->
-<!-- 								<div class="col-md-9"> -->
-<!-- 									<div class="form-group"> -->
-<!-- 										<label class="control-label col-md-2">个人中心LOGO</label> -->
-<!-- 										<div class="col-md-5"> -->
-<!-- 											<input type="file" name="file" id="centerHeadImg_2" class="form-control fileInput"  -->
-<!-- 													onchange="submitForm('centerHeadImg_2','centerHeadImg','centerHeadImg_1','centerHeadImg')"/> -->
-<!-- 										</div> -->
-<!-- 										<div class="col-md-5" id="" style="margin-top: 7px;"> -->
-<%-- 											<img id="centerHeadImg_1" src="${Obj.centerHeadImg}" style="max-width: 400px;"/> --%>
-<%-- 											<input type="hidden"  val="hidden" id="centerHeadImg"  name = "centerHeadImg" value="${Obj.centerHeadImg}"> --%>
-<!-- 										</div> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
+							</div> --%>
 
-							<div class="row">
-								<div class="col-md-12">
-									<div class="form-group">
-										<label class="control-label col-md-1">渠道图标</label>
-										<div class="col-md-5">
-											<input type="file" name="file" id="icon_2" class="form-control fileInput" 
-													onchange="submitForm('icon_2','icon','icon_1','icon')"/>
-										</div>
-										<div class="col-md-5" id="" style="margin-top: 7px;">
-											<img id="icon_1" src="${Obj.icon}" style="max-width: 400px;"/>
-											<input type="hidden"  val="hidden" id="icon"  name = "icon" value="${Obj.icon}">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
+							
+
+							<%-- <div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
 										<label class="control-label col-md-1">关于我们</label>
@@ -363,9 +223,9 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> --%>
 							
-							<div class="page-bar" style="margin-top: 20px;">
+							<%-- <div class="page-bar" style="margin-top: 20px;">
 								<h3>公众号信息</h3>
 							</div>
 							
@@ -467,73 +327,11 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> --%>
 								
 							
 							
 							<c:if test="${Obj == null}">
-							<!--
-							<div class="page-bar" style="margin-top: 20px;">
-								<h3>用户账户信息</h3>
-							</div>
-							
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">账号</label>
-										<div class="col-md-4">
-											<input type="text" class="form-control ajaxCheck1" id="userName"  name = "userName" value="${Obj.userName}" placeholder="账号">
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">密码</label>
-										<div class="col-md-4">
-											<input type="text" class="form-control" id="password"  name = "password">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">姓名</label>
-										<div class="col-md-4">
-											<input type="text" class="form-control" id="shortName" name="shortName" value="${Obj.shortName}"  placeholder="姓名">
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label col-md-2">邮箱</label>
-										<div class="col-md-4">
-											<input type="text" class="form-control" id="email"  name = "email" value="${Obj.email}"   placeholder="邮箱">
-										</div>
-									</div>
-								</div>
-							</div>
-							<c:if test="${roles.size() > 0}">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label class="control-label col-md-2">账户角色</label>
-											<div class="col-md-8">
-												<select id = "roleId" class="form-control" name="roleId">
-													<c:forEach var="obj" items="${roles}">
-														<c:if test="${obj.description == '预付费渠道管理员' || obj.description == '后付费渠道管理员'}">
-															<option value = "${obj.id}">${obj.description}--${obj.roleName}</option>
-														</c:if>
-													</c:forEach>
-												</select>
-											</div>
-										</div>
-									</div>
-								</div>
-							</c:if>
-							-->
-							
-							
 							<div class="page-bar" style="margin-top: 20px;">
 								<h3>银行账户信息</h3>
 							</div>
