@@ -4,9 +4,9 @@ $(function(){
 	QuickSidebar.init(); // 初始化快捷操作栏
 	Demo.init(); // 初始化项目
 	
-	var ue = UE.getEditor('editor');
-	var helpInfoEditor = UE.getEditor('helpInfoEditor');
-	var agreementEditor = UE.getEditor('agreementEditor');
+//	var ue = UE.getEditor('editor');
+//	var helpInfoEditor = UE.getEditor('helpInfoEditor');
+//	var agreementEditor = UE.getEditor('agreementEditor');
 	
 	$("#cancle").click(function(){
 		history.go(-1);
@@ -579,10 +579,10 @@ $(function(){
    	    	
    			var flag = 0;
    			var errMsg = '';
-   			if(checkChannelCode($("#channelCode").val())){
-   				flag++;
-				errMsg = "该二级域名编号已在渠道中使用！";
-   			}
+//   			if(checkChannelCode($("#channelCode").val())){
+//   				flag++;
+//				errMsg = "该二级域名编号已在渠道中使用！";
+//   			}
    			
 //   			var text = $(".form-horizontal input[val='hidden']");
 //   			for(var i = 0; i < text.size();i++){
@@ -611,26 +611,26 @@ $(function(){
 //   	   			}
 //   			}
    			
-   			if(!UE.getEditor('editor').hasContents()){
-   				flag++;
-   				errMsg = "请输入关于我们！";
-   			}else{
-   				$("#aboutUs").val(UE.getEditor('editor').getContent());
-   			}
-   			
-   			if(!UE.getEditor('helpInfoEditor').hasContents()){
-   				flag++;
-   				errMsg = "请输入帮助中心！";
-   			}else{
-   				$("#helpInfo").val(UE.getEditor('helpInfoEditor').getContent());
-   			}
-   			
-   			if(!UE.getEditor('agreementEditor').hasContents()){
-   				flag++;
-   				errMsg = "请输入电子协议内容！";
-   			}else{
-   				$("#agreement").val(UE.getEditor('agreementEditor').getContent());
-   			}
+//   			if(!UE.getEditor('editor').hasContents()){
+//   				flag++;
+//   				errMsg = "请输入关于我们！";
+//   			}else{
+//   				$("#aboutUs").val(UE.getEditor('editor').getContent());
+//   			}
+//   			
+//   			if(!UE.getEditor('helpInfoEditor').hasContents()){
+//   				flag++;
+//   				errMsg = "请输入帮助中心！";
+//   			}else{
+//   				$("#helpInfo").val(UE.getEditor('helpInfoEditor').getContent());
+//   			}
+//   			
+//   			if(!UE.getEditor('agreementEditor').hasContents()){
+//   				flag++;
+//   				errMsg = "请输入电子协议内容！";
+//   			}else{
+//   				$("#agreement").val(UE.getEditor('agreementEditor').getContent());
+//   			}
    			
    			
    			if(flag == 0){

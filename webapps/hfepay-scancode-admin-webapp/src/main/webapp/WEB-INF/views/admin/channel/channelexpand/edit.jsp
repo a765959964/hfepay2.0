@@ -25,8 +25,8 @@
 <jsp:include page="../../include/commoncss.jsp"></jsp:include>
 <link rel="shortcut icon" href="${currentChannelInfo.icon }"/>
 
-<script type="text/javascript" charset="utf-8" src="${path}/resources/scripts/ue/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="${path}/resources/scripts/ue/ueditor.all.min.js"> </script>
+<%-- <script type="text/javascript" charset="utf-8" src="${path}/resources/scripts/ue/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="${path}/resources/scripts/ue/ueditor.all.min.js"> </script> --%>
 
 <style type="text/css">
 .hiddenRow{
@@ -71,7 +71,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label class="control-label col-md-2">渠道名称*</label>
+										<label class="control-label col-md-2">渠道名称111*</label>
 										<div class="col-md-4">
 											<input type="text" class="form-control" id="channelName"  name = "channelName" 
 												<c:if test="${Obj != null}">readonly="readonly"</c:if> value="${Obj.channelName}" placeholder="渠道名称">

@@ -22,12 +22,15 @@
 	<dependencies>
 	
 		
+		<!--  zf 新加入的包，解决json错误    begin -->
 		<!-- https://mvnrepository.com/artifact/net.sf.ezmorph/ezmorph -->
-<dependency>
-    <groupId>net.sf.ezmorph</groupId>
-    <artifactId>ezmorph</artifactId>
-    <version>1.0.6</version>
-</dependency>
+		<dependency>
+		    <groupId>net.sf.ezmorph</groupId>
+		    <artifactId>ezmorph</artifactId>
+		    <version>1.0.6</version>
+		</dependency>
+		<!--  zf 新加入的包，解决json错误   end -->
+		
 		
 		<dependency>
 			<groupId>com.hfepay.commons</groupId>

@@ -61,8 +61,8 @@
 		<td class="col-md-2 td0">法人姓名</td><td class="col-md-4 parent_id_parse" title="name">${item.name}</td>
 		<td class="col-md-2 td0">法人身份证号码</td><td class="col-md-4 parent_id_parse" title="idCard">${item.idCard}</td>
 	</tr>
-	<tr>
-		<td class="col-md-2 td0">身份证正面
+		<%-- <tr>
+	<td class="col-md-2 td0">身份证正面
 		<c:if test="${not empty item.idcardImg1}">
 			<br><br><a style="cursor:pointer;" class="refreshImg" attr="/${item.merchantNo}/idcardImg1">刷新图片</a>
 		</c:if>
@@ -125,7 +125,7 @@
 		</div>
 		</c:if>
 		</td>
-	</tr>
+	</tr> --%>
 	<tr>
 		<td class="col-md-2 td0">联系电话</td><td class="col-md-4 parent_id_parse" title="phone">${item.phone}</td>
 		<td class="col-md-2 td0">邮箱</td><td class="col-md-4 parent_id_parse" title="email">${item.email}</td>
