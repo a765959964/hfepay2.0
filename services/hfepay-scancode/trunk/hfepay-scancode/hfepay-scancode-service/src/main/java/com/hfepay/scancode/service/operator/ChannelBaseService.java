@@ -5,6 +5,7 @@
  */package com.hfepay.scancode.service.operator;
 
 import java.util.List;
+import java.util.Map;
 
 import com.hfepay.commons.criteria.Criteria;
 import com.hfepay.commons.utils.PagingResult;
@@ -143,5 +144,12 @@ public interface ChannelBaseService {
 	
 	/** 添加二维码 */
 	public void addQrcode(String channelNo ,String qrcodeNum,Admin user);
+	
+	/**
+	 * 自定义查询条件
+	 * @param params
+	 * @return
+	 */
+	List selectList(Map params);
 }
 

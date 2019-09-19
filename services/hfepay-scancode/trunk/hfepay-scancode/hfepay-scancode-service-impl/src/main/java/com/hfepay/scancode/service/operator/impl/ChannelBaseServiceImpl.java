@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.mortbay.log.Log;
@@ -444,6 +445,11 @@ public class ChannelBaseServiceImpl implements ChannelBaseService {
 			qrcodeAssignedLogService.insert(qrcodeAssignedLogCondition);//二维码流水日志
 			Log.info(channelNo +"二维码流水日志插入完成");
 		}
+	}
+
+	@Override
+	public List selectList(Map params) {
+		return channelBaseDAO.selectList(params);
 	};
 }
 

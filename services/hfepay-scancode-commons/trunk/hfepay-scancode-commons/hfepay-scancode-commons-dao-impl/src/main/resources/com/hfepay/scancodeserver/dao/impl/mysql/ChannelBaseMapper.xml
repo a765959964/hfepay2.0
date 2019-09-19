@@ -231,5 +231,23 @@
 		set `STATUS` = #{status}
 		where id=#{id}
   </update>
+  
+  
+  <!-- 自定义查询 -->
+  <select id="selectList" resultType="java.util.Map">
+  		
+	select t.channel_no,t.channel_name,t.create_time from t_channel_base t 
+  	where 1=1 
+  	
+  	<if test="channleNo !='' and channelNo !=null">
+  		and t.channel_no like concat("%",#{channelNo},"%")
+  	</if>
+  	
+  	<if test="channleName != '' and channelName != null ">
+  		and t.channel_name like concat("%",#{channelName},"%")
+  	</if>
+  	
+  </select>
+  
 </mapper>
 

@@ -113,6 +113,32 @@ public class ChannelBaseController extends BaseController{
 		return json;
 	}
 	
+	
+	/**
+	 * 自定义查询条件
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="/selectList",method=RequestMethod.GET)
+	@ResponseBody
+	public List selectList(HttpServletRequest request){		
+        Map params = new HashMap();
+        
+        String channelNo = request.getParameter("channelNo");
+        if(channelNo !=null){
+        	params.put("channelNo", channelNo);
+        }
+        
+        String channelName = request.getParameter("channelName");
+        
+        if(channelName != null){
+        	params.put("channelName", channelName);
+        }
+        List list = channelBaseService.selectList(params);
+        
+		return list;
+	}
+	
 	/**
 	 * @Title: saveOrUpdateById
 	 * @Description: 删除

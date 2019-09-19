@@ -5,6 +5,7 @@
  */package com.hfepay.scancode.commons.dao.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -32,5 +33,10 @@ public class ChannelBaseDAOImpl extends MybatisEntityDAO<ChannelBase, String> im
 		map.put("id", id);
 		map.put("status", status);
 		return getSqlSession().update(sqlId("updateStatus"),map);
+	}
+
+	@Override
+	public List selectList(Map params) {
+		return getSqlSession().selectList("selectList", params);
 	}	
 }
