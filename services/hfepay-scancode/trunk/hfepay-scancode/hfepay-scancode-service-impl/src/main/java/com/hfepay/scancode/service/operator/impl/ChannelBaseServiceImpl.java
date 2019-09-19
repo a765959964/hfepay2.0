@@ -73,7 +73,7 @@ public class ChannelBaseServiceImpl implements ChannelBaseService {
 			cb.andEQ("id", channelBaseCondition.getId());
 		}
 		if(!Strings.isEmpty(channelBaseCondition.getChannelNo())){
-			cb.andEQ("channelNo", channelBaseCondition.getChannelNo());
+			cb.andLike("channelNo", channelBaseCondition.getChannelNo());
 		}
 		if(!Strings.isEmpty(channelBaseCondition.getChannelName())){
 			cb.andLike("channelName", channelBaseCondition.getChannelName());
