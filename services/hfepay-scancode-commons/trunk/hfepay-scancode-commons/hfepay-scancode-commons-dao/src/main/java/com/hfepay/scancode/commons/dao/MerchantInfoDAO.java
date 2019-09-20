@@ -4,6 +4,8 @@
  * Since 2016 - 2016
  */package com.hfepay.scancode.commons.dao;
 
+import java.util.List;
+
 import com.hfepay.commons.base.annotation.Generated;
 import com.hfepay.commons.dao.EntityDAO;
 import com.hfepay.scancode.commons.entity.MerchantInfo;
@@ -25,5 +27,12 @@ public interface MerchantInfoDAO extends EntityDAO<MerchantInfo, String> {
 	 * @return: long
 	 */
 	long updateByMerchantNo(MerchantInfo condition);	
+	
+	
+	/**
+	 * 获取select 选择渠道信息
+	 * @return
+	 */
+	List<?> getSelectChannel();
 
 }

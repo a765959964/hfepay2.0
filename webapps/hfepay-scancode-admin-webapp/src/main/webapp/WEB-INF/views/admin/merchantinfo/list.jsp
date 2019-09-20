@@ -93,10 +93,10 @@
 										<label class="control-label col-md-4">渠道名称</label>
 										<div class="col-md-8">
 											<select id = "channelNo" class="form-control" name="channelNo">
-												<option value = "">---   请选择   ---</option>
+												<%-- <option value = "">---   请选择   ---</option>
 												<c:forEach var="obj" items="${channels}">
 													<option value = "${obj.channelNo}">${obj.channelName}</option>
-												</c:forEach>
+												</c:forEach> --%>
 											</select>
 										</div>
 									</div>

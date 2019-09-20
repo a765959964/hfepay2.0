@@ -5,6 +5,7 @@
  */package com.hfepay.scancode.commons.dao.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
@@ -32,5 +33,10 @@ public class MerchantInfoDAOImpl extends MybatisEntityDAO<MerchantInfo, String> 
 	public long updateByMerchantNo(MerchantInfo condition) {
 		// TODO Auto-generated method stub
 		return getSqlSession().update(sqlId("updateByMerchantNo"),condition);
+	}
+
+	@Override
+	public List<?> getSelectChannel() {
+		return getSqlSession().selectList("getSelectChannel");
 	}	
 }

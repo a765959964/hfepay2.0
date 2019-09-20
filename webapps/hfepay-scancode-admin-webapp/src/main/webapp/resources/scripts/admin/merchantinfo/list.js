@@ -1,5 +1,8 @@
 $(function(){
 	
+	
+	
+	initChannel();
 	$("#query").click(function(){
 		toPage(1);
 	});
@@ -20,7 +23,29 @@ $(function(){
 	toPage(1);
 	
 	selectUtil.initAgent();	
+	
+
+	
+	
 });
+
+//初始化 渠道信息
+function initChannel(){
+	var _html = "";
+	$.get("/adminManage/merchantinfo/getSelectChannel",function (res){
+		var r = $.parseJSON(res);
+		if(r.data.length>0){
+			_html += "<option value=''>---   请选择   ---</option>";
+			for(var i = 0;i<r.data.length; i++ ){
+				_html += "<option  value='"+r.data[i].channel_no+"'> "+r.data[i].channel_name+" </option>";
+			}
+			$("#channelNo").append(_html);
+		}
+	});
+	
+	
+}
+
 function toPage(pageNumber){
 	var datajson = $('#form').serialize();
 	var doEle = "tablec";

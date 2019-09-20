@@ -2053,5 +2053,10 @@ public class MerchantInfoServiceImpl implements MerchantInfoService {
 		}
 		return result;
 	}
+
+	@Override
+	public List<?> getSelectChannel() {
+		return merchantInfoDAO.getSelectChannel();
+	}
 }
 

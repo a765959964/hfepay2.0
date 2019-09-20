@@ -73,6 +73,8 @@ import com.hfepay.scancode.service.operator.MerchantPaywayService;
 import com.hfepay.scancode.service.operator.MerchantStoreService;
 import com.hfepay.scancode.service.operator.NodeRelationService;
 import com.hfepay.scancode.service.operator.PlatformQrcodeService;
+import com.hfepay.scancode.utils.ZJ_Response;
+import com.hfepay.scancode.utils.ZJ_Result;
 
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
@@ -128,16 +130,20 @@ public class MerchantInfoController extends ScanBaseController{
 	@RequestMapping(method= {RequestMethod.GET,RequestMethod.POST})
 	public String list(HttpServletRequest request) {
 		
+		
+		//使用ajax 获取
 		//渠道列表
-		ChannelBaseCondition channelCondition = new ChannelBaseCondition();
-		channelCondition.setStatus(Constants.SUCCESS_STATE);
-		request.setAttribute("channels",channelBaseService.findAll(channelCondition));
+//		ChannelBaseCondition channelCondition = new ChannelBaseCondition();
+//		channelCondition.setStatus(Constants.SUCCESS_STATE);
+//		request.setAttribute("channels",channelBaseService.findAll(channelCondition));
 		
 		//代理商列表
-		AgentBaseCondition agentBaseCondition =new AgentBaseCondition();
-		agentBaseCondition.setStatus(Constants.SUCCESS_STATE);
-		agentBaseCondition.setRecordStatus(Constants.RECORD_STATUS_YES);
-		request.setAttribute("agents",agentBaseService.findAll(agentBaseCondition));
+		// 代理商  从公用js 获取， 此代码没用
+		
+//		AgentBaseCondition agentBaseCondition =new AgentBaseCondition();
+//		agentBaseCondition.setStatus(Constants.SUCCESS_STATE);
+//		agentBaseCondition.setRecordStatus(Constants.RECORD_STATUS_YES);
+//		request.setAttribute("agents",agentBaseService.findAll(agentBaseCondition));
 		return "admin/merchantinfo/list";
 	}
 	
@@ -149,14 +155,15 @@ public class MerchantInfoController extends ScanBaseController{
 	@RequestMapping(value = "/content", method= {RequestMethod.POST})
 	public String listContent(HttpServletRequest request,ModelMap model,MerchantInfoCondition merchantInfoCondition){		
 		PagingResult<MerchantInfo> page = merchantInfoService.findPagingResult(merchantInfoCondition);		
-		for (MerchantInfo entity : page.getResult()) {
-			if(Strings.isNotEmpty(entity.getBusType())){
-				HfepayCategory category = hfepayCategoryService.findByCategoryNo(entity.getBusType());
-				if(category != null){
-					entity.setBusType(category.getName() + "(" + category.getCategoryNo() +  ")");
-				}
-			}
-		}		
+		//此代码，页面中没有用到的地方   
+//		for (MerchantInfo entity : page.getResult()) {
+//			if(Strings.isNotEmpty(entity.getBusType())){
+//				HfepayCategory category = hfepayCategoryService.findByCategoryNo(entity.getBusType());
+//				if(category != null){
+//					entity.setBusType(category.getName() + "(" + category.getCategoryNo() +  ")");
+//				}
+//			}
+//		}		
 		Pager<MerchantInfo> pager = new Pager<MerchantInfo>();
 		pager.setPageNo(merchantInfoCondition.getPageNo());
 		pager.setPageSize(merchantInfoCondition.getPageSize());
@@ -168,6 +175,21 @@ public class MerchantInfoController extends ScanBaseController{
 		model.addAttribute("pager",pager);
 		return "admin/merchantinfo/listContent";
 	}
+	
+	
+	/**
+	 * 使用自定义 sql 获取渠道 名称
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping(value="/getSelectChannel",method=RequestMethod.GET)
+	@ResponseBody
+	public ZJ_Result<List> getSelectChannel(HttpServletRequest request){
+		List list = merchantInfoService.getSelectChannel();
+		return	ZJ_Response.makeOKRsp(list);
+	}
+	
+	
 	
 	/** 列表无分页 */
 	@RequestMapping(value="/list",method=RequestMethod.POST)

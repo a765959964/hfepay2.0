@@ -218,6 +218,13 @@ public interface MerchantInfoService {
 	 * @throws Exception
 	 */
 	Map<String, String> validateIdCard2(String name, String idCard) throws Exception;
+	
+	
+	/**
+	 * 获取渠道名称 针对于 select 下拉框使用
+	 * @return
+	 */
+	List<?> getSelectChannel();
 
 }
 

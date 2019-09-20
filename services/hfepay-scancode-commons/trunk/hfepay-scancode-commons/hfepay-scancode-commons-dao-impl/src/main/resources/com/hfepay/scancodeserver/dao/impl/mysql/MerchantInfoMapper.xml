@@ -532,5 +532,17 @@
     </set>
     where A.merchant_no = #{merchantNo}
   </update>
+  
+  
+  <!-- 获取渠道列表 ， 下拉框使用 -->
+  <select id="getSelectChannel" resultType="java.util.Map">
+  	SELECT
+		A.channel_no ,
+		A.channel_name 
+	FROM
+		t_channel_base A
+	WHERE
+		A. STATUS = '1'
+  </select>
 </mapper>
 
